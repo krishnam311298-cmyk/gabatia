@@ -30,19 +30,20 @@ We recommend deploying this Next.js application to **Netlify** rather than GitHu
 1. **Push your code to GitHub**:
    - Initialize a git repository if you haven't already: `git init`
    - Add your files: `git add .`
-   - Commit your code: `git commit -m "feat: initial commit of Gabatia website"`
+   - Commit your code: `git commit -m "docs: update deployment instructions with base directory config"`
    - Push to a new repository on your GitHub account.
 
 2. **Connect to Netlify**:
    - Log in to [Netlify](https://app.netlify.com).
    - Click **"Add new site"** -> **"Import an existing project"**.
    - Select **GitHub** and authorize Netlify.
-   - Choose your newly created `gabatia-website` repository.
+   - Choose your newly created repository.
 
-3. **Deploy settings**:
-   - Netlify will automatically detect that it's a Next.js project.
+3. **Deploy settings (Crucial Step)**:
+   - Since your Next.js project is inside a subfolder, you **must set the Base directory**.
+   - **Base directory**: `gabatia-website` (Type this exactly as the folder name)
    - **Build command**: `npm run build`
-   - **Publish directory**: `.next`
+   - **Publish directory**: `.next` (Netlify will usually auto-fill this after setting the Base directory)
    - Click **Deploy Site**.
 
 4. **Add Custom Domain** (Optional):
